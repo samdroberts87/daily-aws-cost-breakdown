@@ -5,4 +5,5 @@ resource "aws_lambda_function" "cost_notification_lambda" {
   s3_bucket     = aws_s3_bucket.lambda_bucket.bucket
   s3_key        = aws_s3_object.lambda_object.key
   role          = aws_iam_role.lambda_role.arn
+  timeout       = 30
 }

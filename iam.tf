@@ -22,6 +22,11 @@ resource "aws_iam_role" "lambda_role" {
           Effect   = "Allow"
           Action   = "ce:GetCostAndUsage"
           Resource = "*"
+        },
+        {
+          Effect   = "Allow"
+          Action   = "ses:SendEmail"
+          Resource = "arn:aws:ses:eu-west-2:084870457327:identity/samdroberts87@gmail.com"
         }
       ]
     })
